@@ -35,19 +35,18 @@ We can customize the list of packages and applications in the loop sections of t
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements or find bugs, please open an issue or submit a pull request.
 
-**Fork the Repository**
+**Fork the Repository**:
 Create a Feature Branch
-    ```sh
-    git checkout -b feature-branch`
 
-**Commit Your Changes**
-    ```sh
+    git checkout -b feature-branch
+
+**Commit Your Changes**:
+
     git commit -m "Describe your changes"
 
 
-**Push to the Branch**
+**Push to the Branch**:
 
-    ```sh
     git push origin feature-branch
 
 
