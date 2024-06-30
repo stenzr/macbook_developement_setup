@@ -1,0 +1,42 @@
+# macbook-setup.yml
+---
+- name: Set up a new MacBook for development
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Check if Homebrew is installed
+      command: brew --version
+      register: brew_check
+      ignore_errors: yes
+
+    - name: Install Homebrew
+      shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      when: brew_check.rc != 0
+
+    - name: Ensure Homebrew is up-to-date
+      command: brew update
+      when: brew_check.rc == 0
+
+    - name: Install Homebrew packages
+      community.general.homebrew:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - git
+        - node
+        - python
+        - docker
+        - wget
+        - nvm
+
+    - name: Install Homebrew Cask applications
+      community.general.homebrew_cask:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - visual-studio-code
+        - google-chrome
+        - vlc
+        - protonvpn
+        - brave-browser
+
