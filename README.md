@@ -2,24 +2,10 @@
 
 This Ansible playbook automates the setup of a new MacBook for development by installing essential tools and applications using Homebrew and Homebrew Cask.
 
-## Prerequisites
+## Usage
+execute the script from the root of the project
 
-1. **Install Ansible**:
-   Ensure you have Ansible installed on your MacBook. If not, you can install it using Homebrew:
-   ```sh
-   brew install ansible
-
-2. **Local Setup**:
-    Clone the repository
-
-    ```sh
-    git clone git@github.com:stenzr/macbook_developement_setup.git
-    cd mac_developement_setup
-
-
-3. **Execute the playbook**:
-    ```sh
-    ansible-playbook playbook/macbook-setup.yml -i "localhost" --ask-become-pass
+    bash setup_steps.sh
 
 ## Customization:
 We can customize the list of packages and applications in the loop sections of the playbook to suit our specific development needs. For example, add or remove packages from the Homebrew packages or Cask applications list as required.
