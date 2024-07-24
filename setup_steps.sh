@@ -45,4 +45,13 @@ echo "Cleaning up..."
 rm -rf $REPO_DIR
 
 echo "Setup complete. Repository has been removed."
-echo "Thank you for using this setup script! Visit me @ https://stenzr.github.io."
+
+# Friendly message
+cat <<EOL
+
+Setup complete. Repository has been removed.
+
+- Thank you for using this setup script!
+- For more information, visit [stenzr.github.io](https://stenzr.github.io).
+
+EOL
