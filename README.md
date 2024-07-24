@@ -5,7 +5,7 @@ This Ansible playbook automates the setup of a new MacBook for development by in
 ## Usage
 execute the command
 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/stenzr/macbook_development_setup/main/setup_macbook.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/stenzr/macbook_developement_setup/main/setup_steps.sh)"
 
 ## Customization:
 We can customize the list of packages and applications in the loop sections of the playbook to suit our specific development needs. For example, add or remove packages from the Homebrew packages or Cask applications list as required.
