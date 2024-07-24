@@ -44,8 +44,6 @@ cd ..
 echo "Cleaning up..."
 rm -rf $REPO_DIR
 
-echo "Setup complete. Repository has been removed."
-
 # Friendly message
 cat <<EOL
 
